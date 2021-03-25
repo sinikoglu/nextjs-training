@@ -2,6 +2,7 @@ import Head from "next/head";
 import ArticleList from "../components/ArticleList";
 
 import { server } from "./../config";
+import { articles } from "./../data";
 
 export default function Home(props) {
   return (
@@ -11,11 +12,11 @@ export default function Home(props) {
         <meta name="keywords" content="web dev , asd " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ArticleList articles={props.articles} />
+      <ArticleList articles={articles} />
     </div>
   );
 }
-
+/*
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/articles`);
   const articles = await res.json();
@@ -26,6 +27,7 @@ export const getStaticProps = async () => {
     },
   };
 };
+*/
 
 /*
 export const getStaticProps = async () => {
